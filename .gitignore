@@ -2,6 +2,7 @@
 #Folders
 dist
 node_modules
+artifacts
 
 #Files
 package-lock.json
