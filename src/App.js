@@ -10,7 +10,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            {pipelineTest()}
           </p>
           <span>
             Learn{' '}
@@ -36,6 +36,10 @@ class App extends Component {
       </div>
     )
   }
+}
+
+const pipelineTest = function () {
+  return 'This is a test of the netflify CI pipeline';
 }
 
 export default App
