@@ -1,0 +1,53 @@
+{
+  "prefetchRate": 5,
+  "maxThreads": 1,
+  "disableRoutePrefixing": false,
+  "outputFileRate": 100,
+  "extensions": [
+    ".js",
+    ".jsx"
+  ],
+  "minLoadTime": 200,
+  "disablePreload": false,
+  "disableRuntime": false,
+  "preloadPollInterval": 300,
+  "productionSourceMaps": false,
+  "entry": "index.js",
+  "paths": {
+    "ROOT": "/Users/a206617801/Documents/personal/react-static/financial-reviews",
+    "SRC": "/Users/a206617801/Documents/personal/react-static/financial-reviews/src",
+    "DIST": "/Users/a206617801/Documents/personal/react-static/financial-reviews/dist",
+    "ASSETS": "/Users/a206617801/Documents/personal/react-static/financial-reviews/dist",
+    "PLUGINS": "/Users/a206617801/Documents/personal/react-static/financial-reviews/plugins",
+    "TEMP": "/Users/a206617801/Documents/personal/react-static/financial-reviews/tmp",
+    "ARTIFACTS": "/Users/a206617801/Documents/personal/react-static/financial-reviews/artifacts",
+    "PUBLIC": "/Users/a206617801/Documents/personal/react-static/financial-reviews/public",
+    "NODE_MODULES": "/Users/a206617801/Documents/personal/react-static/financial-reviews/node_modules",
+    "EXCLUDE_MODULES": "/Users/a206617801/Documents/personal/react-static/financial-reviews/node_modules",
+    "PACKAGE": "/Users/a206617801/Documents/personal/react-static/financial-reviews/package.json",
+    "HTML_TEMPLATE": "/Users/a206617801/Documents/personal/react-static/financial-reviews/dist/index.html",
+    "STATIC_DATA": "/Users/a206617801/Documents/personal/react-static/financial-reviews/dist/staticData"
+  },
+  "plugins": [
+    "/Users/a206617801/Documents/personal/react-static/financial-reviews"
+  ],
+  "siteRoot": "",
+  "basePath": "",
+  "publicPath": "/",
+  "assetsPath": "",
+  "extractCssChunks": false,
+  "inlineCss": false,
+  "babelExcludes": [],
+  "devServer": {
+    "host": "localhost",
+    "port": 3000
+  },
+  "terser": {
+    "terserOptions": {
+      "mangle": {},
+      "parse": {},
+      "compress": {},
+      "output": {}
+    }
+  }
+}
