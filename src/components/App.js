@@ -1,16 +1,33 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import './app.css'
-import logo from './logo.png'
+import '../app.css';
+import logo from '../logo.png';
+
+import { getIncomeData } from '../methods/gSheetsData';
+
+let incomes = {
+    headings: [ '' ]
+};
 
 class App extends Component {
+
+  componentDidMount() {
+    
+    return new Promise( async (resolve, reject) => {
+    
+        incomes = await getIncomeData();
+        this.forceUpdate();
+    });
+  };
+  
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            {pipelineTest()}
+            <button onClick={() => this.pipelineTest()}>A Test Button</button>
+            {incomes.headings[1]}
           </p>
           <span>
             Learn{' '}
@@ -36,10 +53,6 @@ class App extends Component {
       </div>
     )
   }
-}
-
-const pipelineTest = function () {
-  return 'This is a test of the netflify CI pipeline';
 }
 
 export default App
