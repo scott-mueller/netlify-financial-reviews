@@ -3,11 +3,9 @@ import React, { Component } from 'react';
 import '../app.css';
 import logo from '../logo.png';
 
-import { getIncomeData } from '../methods/gSheetsData';
+import { getIncomeData, getBillsData, getCreditCardData } from '../methods/gSheetsData';
 
-let incomes = {
-    headings: [ '' ]
-};
+let doneFlag = 'NOT DONE';
 
 class App extends Component {
 
@@ -15,7 +13,11 @@ class App extends Component {
     
     return new Promise( async (resolve, reject) => {
     
-        incomes = await getIncomeData();
+        const incomes = await getIncomeData();
+        const bills = await getBillsData();
+        const creditCards = await getCreditCardData();
+
+        doneFlag = 'DONE!'
         this.forceUpdate();
     });
   };
@@ -27,7 +29,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             <button onClick={() => this.pipelineTest()}>A Test Button</button>
-            {incomes.headings[1]}
+            {doneFlag}
           </p>
           <span>
             Learn{' '}
